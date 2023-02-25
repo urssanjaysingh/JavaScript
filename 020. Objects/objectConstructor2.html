@@ -1,0 +1,22 @@
+<!-- This example demonstrates how to create an object with a User-Defined Function. 
+    Here this keyword is used to refer to the object that has been passed to a function. -->
+
+<html>
+    <head>
+        <title>User-Defined Objects</title>
+        <script>
+            function book(title, author) {
+                this.title = title
+                this.author = author
+            }
+        </script>
+    </head>
+
+    <body>
+        <script>
+            var myBook = new book("Perl", "Mohtasim")
+            document.write("Book title is : " + myBook.title + "<br>")
+            document.write("Book author is : " + myBook.author + "<br>")
+        </script>
+    </body>
+</html>

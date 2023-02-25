@@ -1,0 +1,22 @@
+<!-- This method executes the search for a match between a regular expression and this string object.
+If successful, the search returns the index of the regular expression inside the string. 
+Otherwise, it returns -1. -->
+
+<html>
+    <head>
+        <title>JavaScript String search() Method</title>
+    </head>
+
+    <body>
+        <script>
+            var re = /apple/gi;
+            var str = "Apples are round, and apples are juicy.";
+
+            if(str.search(re) == -1) {
+                document.write("does not contains Apples");
+            } else {
+                document.write("Contains Apples");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!-- You can show an appropriate message to your site visitors before redirecting them to a new page. 
+This would need a bit time delay to load a new page. 
+The following example shows how to implement the same. Here setTimeout() is a built-in JavaScript
+function which can be used to execute another function after a given time interval. -->
+
+<html>
+    <head>
+        <script>
+            function Redirect() {
+                window.location = "http://www.google.co.in"
+            }
+            document.write("You will be redirected to Google search in 10 seconds!")
+            setTimeout('Redirect()', 10000)
+        </script>
+    </head>
+</html>

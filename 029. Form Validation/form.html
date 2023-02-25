@@ -1,0 +1,46 @@
+<!-- Form validation normally used to occur at the server, after the client had
+entered all the necessary data and then pressed the Submit button. If the data
+entered by a client was incorrect or was simply missing, the server would have
+to send all the data back to the client and request that the form be resubmitted
+with correct information. This was really a lengthy process which used to put a
+lot of burden on the server. -->
+
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+
+    <body>
+        <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate())">
+            <table cellspacing="2" cellpadding="2" border="1">
+                <tr>
+                    <td align="right">Name</td>
+                    <td><input type="text" name="Name"></td>
+                </tr>
+                <tr>
+                    <td align="right">EMail</td>
+                    <td><input type="text" name="Email"></td>
+                </tr>
+                <tr>
+                    <td align="right">Zip Code</td>
+                    <td><input type="text" name="Zip"></td>
+                </tr>
+                <tr>
+                    <td align="right">Country</td>
+                    <td>
+                        <select name="Country">
+                            <option value="-1" selected>[choose yours]</option>
+                            <option value="1">USA</option>
+                            <option value="2">UK</option>
+                            <option value="3">INDIA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"></td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

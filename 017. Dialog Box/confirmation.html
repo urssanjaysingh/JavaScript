@@ -1,0 +1,29 @@
+<!-- A confirmation dialog box is mostly used to take user's consent on any option.
+It displays a dialog box with two buttons: OK and Cancel.
+If the user clicks on the OK button, the window method confirm() will return
+true. If the user clicks on the Cancel button, then confirm() returns false.
+-->
+
+<html>
+    <head>
+        <script>
+            function getConfirmation() {
+                var retVal = confirm("Do you want to continue ?")
+                if(retVal == true) {
+                    document.write("User wants to continue!")
+                    return true
+                } else {
+                    document.write("User does not want to continue!")
+                    return false
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <p>Click the following button to see the result:</p>
+        <form>
+            <input type="button" value="Click Me" onclick="getConfirmation()">
+        </form>
+    </body>
+</html>

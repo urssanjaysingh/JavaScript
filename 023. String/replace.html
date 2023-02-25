@@ -1,0 +1,21 @@
+<!-- This method finds a match between a regular expression and a string, 
+    and replaces the matched substring with a new substring
+
+flags : A String containing any combination of the RegExp flags: 
+        g global match, i - ignore case, m - match over multiple lines. 
+    This parameter is only used if the first parameter is a string.-->
+
+<html>
+    <head>
+        <title>JavaScript String replace() Method</title>
+    </head>
+
+    <body>
+        <script>
+            var re = /apples/gi;
+            var str = "Apples are round, and apples are juicy.";
+            var newstr = str.replace(re, "oranges");
+            document.write(newstr);
+        </script>
+    </body>
+</html>

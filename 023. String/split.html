@@ -1,0 +1,26 @@
+<!-- This method splits a String object into an array of strings by separating the
+string into substrings.
+
+Its syntax is as follows:
+    string.split([separator][, limit]);
+Argument Details
+>> separator : Specifies the character to use for separating the string. If separator is omitted, 
+                the array returned contains one element consisting of the entire string.
+>> limit : Integer specifying a limit on the number of splits to be found.
+
+The split method returns the new array. Also, when the string is empty, split returns an array 
+containing one empty string, rather than an empty array. -->
+
+<html>
+    <head>
+        <title>JavaScript String split() Method</title>
+    </head>
+
+    <body>
+        <script>
+            var str = "Apples are round, and apples are juicy.";
+            var splitted = str.split(" ", 3);
+            document.write(splitted);
+        </script>
+    </body>
+</html>

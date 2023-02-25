@@ -1,0 +1,35 @@
+<!-- The IE 4 DOM does not support the getElementById() method. Instead, it
+allows you to look up arbitrary document elements by id attribute within the
+all [] array of the document object.
+Here's how to find all <li> tags within the first <ul> tag. Note that you must
+specify the desired HTML tag name in uppercase with the all.tags() method. -->
+
+<html>
+
+    <head>
+        <title> Document Title </title>
+        <script type="text/javascript">
+        <!--
+            function myFunc() {
+                var ret = document.all["heading"];
+                alert("Document Heading : " + ret.innerHTML);
+                var ret = document.all.tags("P");;
+                alert("First Paragraph : " + ret[0].innerHTML);
+            }
+        //-->
+        </script>
+    </head>
+
+    <body>
+        <h1 id="heading">This is main title</h1>
+        <p>Click the following to see the result:</p>
+        <form id="form1" name="FirstForm">
+            <input type="button" value="Click Me" onclick="myFunc();" />
+            <input type="button" value="Cancel">
+        </form>
+        <form d="form2" name="SecondForm">
+            <input type="button" value="Don't ClickMe" />
+        </form>
+    </body>
+
+</html>

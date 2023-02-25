@@ -1,0 +1,30 @@
+<!-- The previous example demonstrate how the constructor creates the object and assigns properties. 
+    But we need to complete the definition of an object by assigning methods to it. -->
+
+<html>
+    <head>
+        <title>User-Defined Objects</title>
+        <script>
+            //define a method which will work as a method
+            function addPrice(amount) {
+                this.price = amount
+            }
+
+            function book(title, author) {
+                this.title = title
+                this.author = author
+                this.addPrice = addPrice    //assign that method as property.
+            }
+        </script>
+    </head>
+
+    <body>
+        <script>
+            var myBook = new book("Perl", "Mohtasim")
+            myBook.addPrice(100)
+            document.write("Book title is : " + myBook.title + "<br>")
+            document.write("Book author is : " + myBook.author + "<br>")
+            document.write("Book price is : " + myBook.price + "<br>")
+        </script>
+    </body>
+</html>
