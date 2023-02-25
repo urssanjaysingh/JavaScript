@@ -1,0 +1,36 @@
+<!-- The funtion statement is not the only way to define a new function;
+you can define your function dynamically using Function() constructor along with the new operator.
+
+NOTE: Constructor is a terminology from Object Oriented Programming. You may not feel confortable for 
+the first time, which is OK. 
+
+Following is the syntax to create a function using Function() constructor along with the new operator.
+
+        var variablename = new Function(Arg1, Arg2..., "Function Body");
+
+The Function() constructor expects any number of string arguments. The last argument is the body of 
+the function – it can contain arbitrary JavaScript statements, separated from each other by semicolons.
+Notice that the Function() constructor is not passed any argument that specifies a name for the function
+it creates. The unnamed functions created with the Function() constructor are called anonymous functions.
+-->
+
+<html>
+    <head>
+        <script>
+            var func = new Function("x", "y", "return x*y")
+
+            function secondFunction() {
+                var result
+                result = func(10, 20)
+                document.write(result)
+            }
+        </script>
+    </head>
+
+    <body>
+        <p>Click the following button to call the function</p>
+        <form>
+            <input type="button" onclick="secondFunction()" value="Call Function">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!-- Try the following example to learn how to implement nested functions. -->
+
+<html>
+    <head>
+        <script>
+            function hypotenuse(a, b) {
+                function square(x) {
+                    return x * x
+                }
+                return Math.sqrt(square(a) + square(b))
+            }
+            function secondFunction() {
+                var result
+                result = hypotenuse(1, 2)
+                document.write(result)
+            }
+        </script>
+    </head>
+    
+    <body>
+        <p>Click the following button to call the function</p>
+        <form>
+            <input type="button" onclick="secondFunction()" value="Call Function">
+        </form>
+    </body>
+</html>

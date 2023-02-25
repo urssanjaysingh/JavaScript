@@ -1,0 +1,25 @@
+<!-- The continue statement tells the interpreter to immediately start the next iteration of the 
+    loop and skip the remaining code block. When a continue statement is encountered, the program 
+    flow moves to the loop check expression immediately and if the condition remains true, then it 
+    starts the next iteration, otherwise the control comes out of the loop.
+
+This example illustrates the use of a continue statement with a while loop.
+Notice how the continue statement is used to skip printing when the index held in variable x reaches 5.
+-->
+
+<html>
+    <body>
+        <script>
+            var x = 1
+            document.write("Entering the loop<br>")
+            while(x < 10) {
+                x = x + 1
+                if (x == 5) {
+                    continue    //skill rest of the loop body
+                }
+                document.write(x + "<br>")
+            }
+            document.write("Exiting the loop!<br>")
+        </script>
+    </body>
+</html>

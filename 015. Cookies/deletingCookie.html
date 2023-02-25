@@ -1,0 +1,24 @@
+<!-- Sometimes you will want to delete a cookie so that subsequent attempts to read the cookie 
+    return nothing. To do this, you just need to set the expire date to time in the pase. -->
+
+<html>
+    <head>
+        <script>
+            function WriteCookie() {
+                var now = new Date()
+                now.setMonth(now.getMonth() - 1)
+                cookievalue = escape(document.myform.customer.value) + ";"
+                document.cookie = "name = " + cookievalue
+                document.cookie = "expires = " + now.toUTCString() + ";"
+                document.write("Setting Cookies : " + "name = " + cookievalue)
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="formname" action="">
+            Enter name: <input type="text" name="customer">
+            <input type="button" value="Set Cookie" onclick="WriteCookie()">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!-- You can extend the life of a cookie beyond the current browser session by setting an expiration date
+and saving the expiry date within the cookie. 
+This can be done by setting the 'expires' attribute to a date and time 
+
+Try the following example. It illustrates how to extend the expiry date of a cookie by 1 Month.-->
+
+<html>
+    <head>
+        <script>
+            function WriteCookie() {
+                var now = new Date()
+                now.setMonth(now.getMonth() + 1)
+                cookievalue = escape(document.myform.customer.value) + ";"
+                document.cookie = "name=" + cookievalue
+                document.cookie = "expires=" + now.toUTCString() + ";"
+                document.write("Setting Cookies : " + "name=" + cookievalue)
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="formname" action="">
+            Enter name: <input type="text" name="customer">
+            <input type="button" value="Set Cookie" onclick="WriteCookie()">
+        </form>
+    </body>
+</html>

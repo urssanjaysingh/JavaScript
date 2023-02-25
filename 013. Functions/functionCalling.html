@@ -1,0 +1,24 @@
+<!-- Before we use a function, we need to define it. The most common way to define a function in 
+    JavaScript is by using the function keyword, followed by a unique function name, a list of 
+    parameters (that might be empty), and a statement block surrounded by curly braces. 
+Try the following example. It defines a function called sayHello that takes no parameters:
+To invoke a function somewhere later in the script, you would simply need to write the name of that 
+function as shown in the following code.
+-->
+
+<html>
+    <head>
+        <script>
+            function sayHello() {
+                document.write("Hello!")
+            }
+        </script>
+    </head>
+
+    <body>
+        <p>Click the following button to call the function</p>
+        <form>
+            <input type="button" onclick="sayHello()" value="Say Hello">
+        </form>
+    </body>
+</html>
